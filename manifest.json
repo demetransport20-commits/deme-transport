@@ -1,0 +1,22 @@
+{
+  "name": "DEME Cross Border Grade-1 Dry Freight Transport",
+  "short_name": "DEME Transport",
+  "description": "Cross-border and domestic dry freight transport with full cargo insurance and cargo allocation.",
+  "start_url": "/index.html",
+  "display": "standalone",
+  "background_color": "#0d2b45",
+  "theme_color": "#0d2b45",
+  "orientation": "portrait-primary",
+  "icons": [
+    {
+      "src": "assets/deme-logo.jpg",
+      "sizes": "192x192",
+      "type": "image/jpeg"
+    },
+    {
+      "src": "assets/deme-logo.jpg",
+      "sizes": "512x512",
+      "type": "image/jpeg"
+    }
+  ]
+}
