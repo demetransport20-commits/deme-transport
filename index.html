@@ -7,11 +7,13 @@
   <meta name="description" content="DEME Cross Border Grade-1 Dry Freight Private Transport provides cross-border freight along Djibouti, Somalia, and Sudan corridors and domestic dry cargo across Ethiopia.">
   <meta name="robots" content="index,follow,max-image-preview:large">
   <link rel="canonical" href="https://demetransport.com/">
+  <link rel="manifest" href="/manifest.json">
+  <meta name="theme-color" content="#0d2b45">
   <meta property="og:type" content="website">
   <meta property="og:url" content="https://demetransport.com/">
   <meta property="og:title" content="DEME Transport | Ethiopia–Djibouti Dry Freight">
   <meta property="og:description" content="Grade-1 dry freight fleet with full cargo insurance, cargo allocation, and cross-border logistics.">
-  <meta property="og:image" content="https://demetransport.com/assets/deme-logo.jpg">
+  <meta property="og:image" content="https://demetransport.com/deme-logo.png">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 
   <!-- Structured Data (Organization / Transport Schema) -->
@@ -21,7 +23,7 @@
     "@type": "Organization",
     "name": "DEME Cross Border Grade-1 Dry Freight Private Transport",
     "url": "https://demetransport.com",
-    "logo": "https://demetransport.com/assets/deme-logo.jpg",
+    "logo": "https://demetransport.com/deme-logo.png",
     "email": "demetransport20@gmail.com",
     "telephone": [
       "+251967555558",
@@ -447,7 +449,7 @@
       margin-bottom: 12px;
     }
 
-    /* Fleet Showcase (Enhancement 1) */
+    /* Fleet Showcase */
     .fleet-bg {
       background-color: #ffffff;
       border-top: 1px solid #e1e8ed;
@@ -678,7 +680,7 @@
       background-color: #163d61;
     }
 
-    /* FAQ Accordion (Enhancement 3) */
+    /* FAQ Accordion */
     .faq-list {
       max-width: 850px;
       margin: 0 auto;
@@ -792,7 +794,7 @@
       display: block;
     }
 
-    /* Footer & Compact Floating Chat Buttons (WhatsApp, Telegram, Email) */
+    /* Footer & Compact Floating Chat Buttons */
     footer {
       background-color: var(--primary-color);
       color: #ffffff;
@@ -904,7 +906,7 @@
   <!-- 1. Navigation Bar -->
   <header>
     <a href="#home" class="logo">
-      <img src="assets/deme-logo.jpg"
+      <img src="/deme-logo.png"
            onerror="this.onerror=null;this.src='https://placehold.co/96x96/0d2b45/f39c12?text=DEME';"
            alt="Deme Transport Logo"
            class="brand-logo-img">
@@ -1042,7 +1044,7 @@
     </div>
   </section>
 
-  <!-- Fleet & Capacity Section (Enhancement 1) -->
+  <!-- Fleet & Capacity Section -->
   <div class="fleet-bg" id="fleet">
     <section class="section-container">
       <div class="section-title">
@@ -1100,7 +1102,7 @@
 
       <div class="manager-card">
         <div class="manager-photo-box">
-          <img src="assets/manager.jpg"
+          <img src="/assets/manager.jpg"
                onerror="this.onerror=null;this.src='manager.jpg';"
                alt="Demelash Adefirs - General Manager"
                class="manager-photo"
@@ -1116,7 +1118,7 @@
               <div class="manager-role" data-i18n="managerRole">Demelash Adefirs — General Manager / Manager</div>
               <div class="manager-subrole" data-i18n="managerSubrole">Deme Cross Border Grade-1 Dry Freight Transport — We provide service in Adama, Addis Ababa, and all destinations in Ethiopia</div>
             </div>
-            <img src="assets/deme-logo.jpg"
+            <img src="/deme-logo.png"
                  onerror="this.onerror=null;this.src='https://placehold.co/128x128/0d2b45/f39c12?text=DEME';"
                  alt="Deme Transport Logo"
                  class="manager-logo-badge">
@@ -1230,7 +1232,7 @@
     </section>
   </div>
 
-  <!-- 6. FAQ Accordion Section (Enhancement 3) -->
+  <!-- 6. FAQ Accordion Section -->
   <section class="section-container" id="faq">
     <div class="section-title">
       <h2 data-i18n="faqTitle">Frequently Asked Questions (FAQ)</h2>
@@ -1781,6 +1783,12 @@
       } else if (platform === 'email') {
         window.location.href = `mailto:${COMPANY_EMAIL}?subject=${encodeURIComponent(emailSubject)}&body=${encodedMessage}`;
       }
+    }
+
+    if ('serviceWorker' in navigator) {
+      window.addEventListener('load', () => {
+        navigator.serviceWorker.register('/sw.js');
+      });
     }
 
     toggleFormFields();
