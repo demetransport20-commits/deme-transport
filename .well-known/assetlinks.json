@@ -1,1 +1,8 @@
-
+[{
+      "relation": ["delegate_permission/common.handle_all_urls"],
+      "target": {
+        "namespace": "android_app",
+        "package_name": "com.demetransport.www.twa",
+        "sha256_cert_fingerprints": ["B4:41:C2:F5:54:57:93:E7:4E:B8:6A:0B:96:07:BF:0C:AD:1D:CD:1D:97:C6:1F:97:6D:77:94:97:A5:80:51:00"]
+      }
+    }]
